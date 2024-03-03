@@ -22,7 +22,8 @@ const Sidebar = () => {
         <nav className="sidebar-nav">
 
           <SignedIn>
-            <ul className="sidebar-nav_elements">
+            
+            <ul className="m-4 flex flex-col gap-4">
 
               {/* this is a map over functionality */}
               {/* we will use this whenever we need  */}
@@ -57,7 +58,7 @@ const Sidebar = () => {
               })}
 
             </ul>
-            <ul className=" m-4">
+          <ul className=" flex flex-col gap-4 m-4">
 
             {navLinks.slice(6).map((link)=>{
                 const isActive = link.route === pathname
@@ -85,20 +86,17 @@ const Sidebar = () => {
 
                 )
               })}
-               <li className="flex-center cursor-pointer gap-2 p-4">
+               <li className="flex-center cursor-pointer gap-2  py-4">
                 <UserButton afterSignOutUrl="/" showName/>
                </li>
             </ul>
-
+           
           </SignedIn>
 
           <SignedOut>
             <Button asChild className="button bg-purple-gradient bg-cover mr5">
               <Link href="/sign-in">login</Link>
             </Button>
-
-
-
           </SignedOut>
 
         </nav>
