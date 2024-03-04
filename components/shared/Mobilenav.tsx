@@ -12,13 +12,11 @@ const Mobilenav = () => {
     const pathname = usePathname();
     return (
         <header className="header">
-            <Link href="/" className="flex items-center gap-2 md:py-2">
+            <Link href="/" className="flex items-center gap-2 md:py-2 ">
                 <Image src="/assets/images/Logo-removebg-preview.png" alt="logo" width={27} height={25} />
                 <nav className="flex gap-2">
                     <SignedIn>
                         <UserButton afterSignOutUrl="/" />
-
-
                         <Sheet>
                             <SheetTrigger>
                                 <Image src="/assets/icons/menu.svg" alt="menu" width={32} height={32} />
