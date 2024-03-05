@@ -35,8 +35,10 @@ const ImageSchema =  new Schema({
     color:{type:String,required:true},
     prompt:{type:String,required:true},
     auther:{type:Schema.Types.ObjectId,ref:'User'},
-},{timestamps:true})
+    createdAt:{type:Date,default:Date.now},
+    updatedAt:{type:Date,default:Date.now}
+})
 
 const Image = models?.Image || mongoose.model('Image',ImageSchema)
-// ?
+
 export default Image
