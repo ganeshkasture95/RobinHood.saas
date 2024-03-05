@@ -17,6 +17,7 @@ const Sidebar = () => {
       <div className="flex size-full flex-col ">
         <Link href="/" className="sidebar-logo">
           <Image src="/assets/images/Logo-removebg-preview.png" alt="logo" width={55} height={50} className=" pb-0 mb-0 " />
+          <Image src="/assets/images/logo_logo.png" alt="logo" width={160} height={90}  />
         </Link>
 
         <nav className="sidebar-nav">

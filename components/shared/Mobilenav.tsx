@@ -14,6 +14,7 @@ const Mobilenav = () => {
         <header className="header">
             <Link href="/" className="flex items-center gap-2 md:py-2 ">
                 <Image src="/assets/images/Logo-removebg-preview.png" alt="logo" width={27} height={25} />
+                <Image src="/assets/images/logo_logo.png" alt="logo" width={160} height={40} className=" pb-0 mb-0  mr-28 " />
                 <nav className="flex gap-2">
                     <SignedIn>
                         <UserButton afterSignOutUrl="/" />
@@ -49,8 +50,8 @@ const Mobilenav = () => {
                                                         />
 
                                                         {link.label}
-
                                                     </Link>
+
                                                 </li>
 
                                             )
