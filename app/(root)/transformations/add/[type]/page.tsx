@@ -3,7 +3,6 @@ import TransformationForm from "@/components/shared/TransformationForm";
 import { transformationTypes } from "@/constants";
 import { getUserById } from "@/lib/actions/user.actions";
 import { auth } from "@clerk/nextjs";
-import { redirect } from "next/navigation";
 
 const AddTransformationTypePage = async ({ params: { type } }: SearchParamProps) => {
 
@@ -13,7 +12,7 @@ const AddTransformationTypePage = async ({ params: { type } }: SearchParamProps)
   const transformation = transformationTypes[type]
 
 
-  if(!userId) redirect('/sign-in')
+
   // mongo db data base user loged in user
   const user = await getUserById(userId)
 
@@ -25,6 +24,8 @@ const AddTransformationTypePage = async ({ params: { type } }: SearchParamProps)
         subtitle={transformation.subTitle}
       />
 
+      <section className=" mt-10">
+        
       <TransformationForm
         action="Add"
         userId={user._id}
@@ -32,6 +33,9 @@ const AddTransformationTypePage = async ({ params: { type } }: SearchParamProps)
         creditBalance={user.creditBalance}
 
       />
+
+      </section>
+
     </>
   )
 }
